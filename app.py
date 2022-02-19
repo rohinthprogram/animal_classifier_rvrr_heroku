@@ -14,8 +14,6 @@ classes = list(dict(json.load(open('translation.json'))).values())
 
 def api_call_cellstarthub(img):
     API_KEY = os.environ.get("API_KEY")
-    USERNAME = os.environ.get("USERNAME")
-    API_NAME = os.environ.get("API_NAME")
 
     endpoint = "https://api.cellstrathub.com/rohinthram/sentiment-analyser"
     headers = {
@@ -23,7 +21,7 @@ def api_call_cellstarthub(img):
     "Content-Type": "application/json"
     }
     
-    payload = {'img':img}
+    payload = {'img':img}   
     print(payload)
     # make a get request to load the model (needed if calling api after long time)
     # print(requests.get(endpoint, headers=headers).json())
