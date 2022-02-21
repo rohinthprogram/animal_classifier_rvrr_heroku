@@ -15,7 +15,7 @@ classes = list(dict(json.load(open('translation.json'))).values())
 def api_call_cellstarthub(img):
     API_KEY = os.environ.get("API_KEY")
 
-    endpoint = "https://api.cellstrathub.com/rohinthram/sentiment-analyser"
+    endpoint = "https://animals-classifier-rvrr.herokuapp.com/classify"
     headers = {
     "x-api-key": API_KEY,
     "Content-Type": "application/json"
