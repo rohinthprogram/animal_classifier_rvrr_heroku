@@ -39,7 +39,7 @@ def home():
         imgstr = base64.b64encode(img.read()).decode('utf-8')
 
         output = api_call_cellstarthub(imgstr)
-        res = output['body']['output']
+        res = output
         res = list(res[1:-1])
         c = res.index(max(res))
         c = classes[c]
